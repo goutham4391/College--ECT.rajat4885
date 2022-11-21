@@ -1,0 +1,126 @@
+ul.mj_accordion {
+  padding: 0;
+  margin:0 0 .5em;
+}
+
+ul.mj_accordion li {
+  margin-left: 0px;
+}
+
+.mj_accordion > li {list-style:none;}
+.mj_accordion > li:first-child .mj_accordion_item {margin-top:5px;}
+
+.mj_accordion .mj_accordion_item {
+  cursor:pointer;
+  background-color: #ebebeb;
+  border:1px solid #cccccc;
+  padding:5px 20px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  margin-top:5px;
+}
+
+.mj_accordion .mj_accordion_item p {
+  margin: 0px;
+  color: inherit;
+}
+
+.mj_accordion .mj_accordion_item:hover {
+  background-color: #f5f5f5;
+}
+
+.mj_accordion .mj_accordion_item.active {
+  background-color: #ace3f9;
+  border-bottom: none;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius:3px 3px 0 0;
+}
+
+.mj_accordion .mj_accordion_item.active:hover {
+  background-color:#d2f2ff;
+}
+
+.mj_accordion .mj_accordion_content {
+  padding:15px;
+  border:1px solid #cccccc;
+  display:none;
+  -webkit-border-radius:0 0 3px 3px;
+  border-radius:0 0 3px 3px;
+  background:#fff;
+}
+
+.mj_accordion .mj_accordion_content.active {display:block; height:inherit;}
+
+/* Overides to remove D9 theme styling */
+ul.mj_accordion > li::before {
+  display: none;
+}
+
+ul[class].mj_accordion > li {
+  padding-left: 0;
+}
+
+ul.mj_accordion .mj_accordion_item h3 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Additional styling overides */
+.mj_accordion .mj_accordion_item {
+  position: relative;
+  color: #fff;
+  border-radius: 8px;
+  background-color: hsl(205,84%,12%);
+  border-color: hsl(205,84%,12%);
+}
+
+.mj_accordion .mj_accordion_item:hover {
+  background-color: hsl(205,84%,18%);
+}
+
+.mj_accordion .mj_accordion_item.active {
+  border-radius: 8px 8px 0 0;
+  background-color: hsl(205,84%,22%);
+}
+
+.mj_accordion .mj_accordion_item.active:hover {
+  background-color: hsl(205,84%,25%);
+}
+
+.mj_accordion .mj_accordion_item::after {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: block;
+  content: '';
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  background-color: currentColor;
+  transform: translateY(-50%);
+  margin-top: 0;
+  transition: all 0.2s ease-in-out;  
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class='svg-inline--fa fa-chevron-up fa-w-14 fa-5x'%3E%3Cpath fill='currentColor' d='M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z' class=''%3E%3C/path%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class='svg-inline--fa fa-chevron-up fa-w-14 fa-5x'%3E%3Cpath fill='currentColor' d='M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z' class=''%3E%3C/path%3E%3C/svg%3E");
+}
+
+.mj_accordion .mj_accordion_item:hover::after,
+.mj_accordion .mj_accordion_item.active::after {
+  transform: translateY(-50%) rotate(-180deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.mj_accordion .mj_accordion_content {
+  border-radius: 0 0 8px 8px;
+  border-color: hsl(205,84%,12%);
+}
+
+/* Links in Accordion title */
+.mj_accordion .mj_accordion_item a {
+  color: inherit;
+  text-decoration: underline;
+}

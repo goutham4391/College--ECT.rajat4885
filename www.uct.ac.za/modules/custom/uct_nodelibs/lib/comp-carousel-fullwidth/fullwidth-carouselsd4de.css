@@ -1,0 +1,55 @@
+.path-frontpage .node--type-page.full > div.node__content {
+  margin-top: 0;
+}
+
+.album-carousel  .carousel-slide .field--name-field-media-image img {
+  object-fit: cover;
+  object-position: center;
+  height: calc( (100vw - 1.5rem) * 0.6);
+  max-height: 100%;
+}
+
+.album-carousel .carousel-slide .field--name-field-media-video-file video {
+  height: 56.25%;
+}
+
+.album-carousel-wrapper {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+@media screen and (min-width: 40rem) {
+  .album-carousel-wrapper {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .album-carousel-wrapper {
+    width: 100vw;
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: auto;
+  }
+  .album-carousel  .carousel-slide .field--name-field-media-image img {
+    max-height: 37.5rem;
+    height: 31.25vw;
+  }
+  .carousel-slide div.node__content {
+    max-width: 41%;
+    margin-left: 9%;
+  }
+  article.carousel-slide {
+    min-height: none;
+    height: calc(31.25vw + 9rem);
+    max-height: 46.875rem;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .album-carousel-wrapper {
+    width: 120rem;
+    margin-left: calc(-60rem + 50%);
+  }
+}

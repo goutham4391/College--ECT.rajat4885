@@ -1,0 +1,8 @@
+/**
+ * @file
+ * Default styles for the microviews paragraph. Hides the exposed form if not enabled.
+ */
+
+[id^="uct-microview--"].no-filters .views-exposed-form {
+  display: none;
+}

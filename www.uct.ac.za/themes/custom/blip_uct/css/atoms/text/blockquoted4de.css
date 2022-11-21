@@ -1,0 +1,22 @@
+/*
+Text (Blockquote)
+
+Heading styles.
+
+Markup:
+  <blockquote>
+  <p>Consequatur torquent, aliquip dolore sint ad risus phasellus quisque pulvinar laboris, nulla, incidunt! Venenatis. Quidem viverra nobis bibendum aut platea culpa, perspiciatis voluptas? Hymenaeos tempor. Eros illum dui, senectus velit exercitationem sit, reiciendis est laudantium dapibus accusantium velit torquent nibh.</p><p>Aut laboriosam ea ornare! Egestas nam, tempor cubilia omnis voluptas ex scelerisque minim officiis diam? Egestas itaque officiis! Litora, hac. Reiciendis, ipsa sapien ac! Error torquent magna cumque turpis pulvinar qui harum nostrum quam lacinia laboriosam, ullamco pulvinar mauris expedita.</p><a href="#"><cite>Vestibulum ut ex taciti</cite></a></blockquote>
+
+Styleguide Atoms.13
+*/
+blockquote { margin-bottom: 2.5rem; }
+
+blockquote, blockquote > p { font-family: "Montserrat", sans-serif; font-weight: 300; font-size: 1.5rem; line-height: 1.09375; }
+
+@media print, screen and (min-width: 40em) { blockquote, blockquote > p { font-size: 2rem; } }
+
+blockquote > p:last-of-type { margin-bottom: 1rem; }
+
+blockquote cite { color: #72808a; font-weight: 700; font-style: normal; font-size: 1rem; line-height: 1.5; }
+
+/*# sourceMappingURL=../../../maps/text/blockquote.css.map */

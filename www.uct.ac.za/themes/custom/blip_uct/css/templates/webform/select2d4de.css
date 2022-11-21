@@ -1,0 +1,10 @@
+/** Foundation for Sites Version 6.6.3 https://get.foundation Licensed under MIT Open Source */
+.select2-container .select2-selection--single { border: 2px solid #c7c7c7; height: 3.125rem; }
+
+.select2-container .select2-selection--single .select2-selection__rendered { line-height: calc(3.125rem - 4px); }
+
+.select2-container .select2-selection--single .select2-selection__arrow { height: calc(3.125rem - 4px); }
+
+.select2-container .select2-results__option--highlighted[aria-selected] { background-color: #0098db; }
+
+/*# sourceMappingURL=../../../maps/webform/select2.css.map */

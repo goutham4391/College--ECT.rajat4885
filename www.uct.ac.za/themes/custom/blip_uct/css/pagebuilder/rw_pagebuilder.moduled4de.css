@@ -1,0 +1,21 @@
+/*! THIS FILE IS COMPILED VIA GULP. ANY CHANGES MADE TO THE CORRESPONDING .CSS FILE WILL BE OVERWRITTEN - JA */
+/** @file Contains the base custom properties for Page Modes. */
+:root { --rw-body-font-family: "Roboto", sans-serif; --rw-background-color: #fff; --rw-text-color: #1e1e1e; --rw-primary-color: #00243a; --rw-secondary-color: #003c69; --rw-highlight-color: #0098db; --rw-white-color: #fff; --rw-black-color: #1e1e1e; --rw-link-text-color: #0076d1; --rw-admin-color: #a9a9a9; --rw-admin-color--warning: #ffffcc; /* @TODO: Match the message colours to UCT's */ --rw-admin-color--warning-text: #9f6000; --rw-admin-color--error: red; --rw-gutter: 2rem; /* 32px; */ /* The standard gap between things */ --rw-pull-size: calc(3 * var(--rw-gutter, 96px)); --rw-container-size: 1152px; /* The default container width (8 x 12 x 12px) */ --rw-display: block; /* The default fallback, override with @support queries */ --rw-display--flex: block; --rw-display--grid: block; }
+
+@supports (display: flex) { :root { --rw-display: flex; --rw-display--flex: flex; --rw-display--inline-flex: inline-flex; } }
+
+@supports (display: grid) { :root { --rw-display: grid; --rw-display--grid: grid; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { :root { --rw-pull-size: 0; } }
+
+@media only screen and (min-width: 321px) { :root { --rw-pull-size: 0; } }
+
+@media only screen and (max-width: 320px) { :root { --rw-pull-size: 0; --rw-gutter: 12px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { :root { --rw-pull-size: 0; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) { :root { --rw-pull-size: 0; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) { :root { --rw-pull-size: 0; } }
+
+/*# sourceMappingURL=../../maps/rw_pagebuilder.module.css.map */

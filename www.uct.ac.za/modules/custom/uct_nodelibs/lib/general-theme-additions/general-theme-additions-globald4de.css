@@ -1,0 +1,134 @@
+/* background image scale to the full height | global */
+section#page--landing-banner {
+  background-size: auto 100%;
+}
+
+/* brand logo maximum height within masthead | global */
+#uct-landing-banner-block img {
+  max-height: 90%;
+}
+
+/* 
+  Page Hero/Header | background image adjustments | global
+*/
+@media print, screen and (min-width: 64em) {
+  #sidebar-first + .section-main #hero {
+    z-index: 0;
+  }
+  
+  #sidebar-first + .section-main #hero::after {
+    width: calc( 100% + 16rem);
+    right: initial;
+    left: 0;
+    transform: none;
+    background-position: center center;
+  }
+  
+  #sidebar-first + .section-main #hero > div {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/*  
+  Webform select element additional styling | global 
+*/
+body:not(.path-admin) select[id] {
+  border-radius: 0.3125rem;
+  border: 2px solid #c7c7c7;
+}
+
+/* Carousel counter: mobile | global */
+@media print, screen and (max-width: 64em) {
+  div.album-carousel .slick__arrow {
+    right: 0;
+    top: 0;
+    padding: .5rem 2rem;
+    background: rgba(0,0,0, .3);
+  }
+
+  div.album-carousel .slick-prev {
+    top: .5rem;
+    left: 0;
+  }
+
+  div.album-carousel .slick-next {
+    top: .5rem;
+    right: 0;
+  }
+}
+
+/* remove is-active background colour on menu items | global */
+.menu[region="primary_menu"] .is-active > a {
+  background-color: transparent;
+}
+
+/* 
+-------------------
+Fontawesome footer social icons | global 
+-------------------
+*/
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.instagram:after {
+  content: "\f16d";
+  font-family: 'Font Awesome 5 brands', sans-serif;
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.flickr:after {
+  content: "\f16e";
+  font-family: 'Font Awesome 5 brands', sans-serif;
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.rss:after {
+  content: "\f09e";
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.email:after {
+  content: "\f0e0";
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.calendar:after {
+  content: "\f073";
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.book:after {
+  content: "\f02d";
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.medpages:after {
+  content: "\f0f0";
+}
+
+/* 
+-----------------------
+Contact group Pager | global
+-----------------------
+*/
+.node--type-page .pager__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.node--type-page .pager__items .pager__item {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+
+.node--type-page .pager__items .pager__item a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.625rem;
+  border: 1px solid var(--rw-link-color, #0076d1);
+  border-radius: 2px;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.node--type-page .pager__items .pager__item a:hover {
+  background-color: var(--rw-link-color, #0076d1);
+  color: #fff;
+  transition: background-color 0.25s ease-in color 0.25s ease-in;
+}

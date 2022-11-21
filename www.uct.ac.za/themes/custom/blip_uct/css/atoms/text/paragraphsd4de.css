@@ -1,0 +1,15 @@
+/*
+Text (Paragraphs)
+
+Paragraph styles.
+
+Markup:
+  <p class="{{modifier_class}}">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.</p>
+
+.lead - lead style
+
+Styleguide Atoms.12
+*/
+p a { word-wrap: break-word; }
+
+/*# sourceMappingURL=../../../maps/text/paragraphs.css.map */

@@ -1,0 +1,23 @@
+h1, .h1 { line-height: 1.166666666666667; }
+
+h2, .h2 { line-height: 1.2; }
+
+aside h2, aside .h2 { font-size: 1.25rem; }
+
+h3, .h3 { line-height: 1.125; }
+
+aside h3, aside .h3 { font-size: 1.125rem; }
+
+h4, .h4 { line-height: 1.333333333333333; }
+
+aside h4, aside .h4 { font-size: 1rem; }
+
+h5, .h5 { line-height: 1.2; }
+
+aside h5, aside .h5 { font-size: 1rem; }
+
+h6, .h6 { line-height: 1.25; }
+
+aside h6, aside .h6 { font-size: 1rem; }
+
+/*# sourceMappingURL=../../../maps/text/headings.css.map */

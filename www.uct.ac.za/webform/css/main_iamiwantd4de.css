@@ -1,0 +1,78 @@
+form[class^="webform-"].i-am-i-want .form-item,
+.i-am-i-want .form-actions {
+  margin: .5rem 0;
+}
+
+.i-am-i-want {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.75rem;
+}
+
+.i-am-i-want .js-form-type-select {
+  width: 100%;
+}
+
+.i-am-i-want .form-actions .i-am-submit-btn {
+  width: calc(100vw - 1.5rem);
+  margin-bottom: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+@media print, screen and (min-width: 64rem) {
+  .i-am-i-want {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .i-am-i-want .js-form-type-select {
+    width: 19.625rem;
+  }
+
+  .i-am-i-want .form-actions .i-am-submit-btn {
+    width: 6.5625rem;
+  }
+}
+
+.i-am-i-want .js-form-type-select select[id] {
+  height: 2.5rem;
+  border: 1px solid #707070;
+  border-radius: 0;
+}
+
+.i-am-i-want .js-form-type-webform-markup p {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.i-am-i-want .form-actions {
+  position: relative;
+}
+
+.i-am-i-want .form-actions::before {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: calc(50% + 4px);
+  display: block;
+  content: '';
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(90deg);
+  margin: auto;
+  transition: all 0.2s ease-in-out;  
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class='svg-inline--fa fa-chevron-up fa-w-14 fa-5x'%3E%3Cpath fill='currentColor' d='M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z' class=''%3E%3C/path%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class='svg-inline--fa fa-chevron-up fa-w-14 fa-5x'%3E%3Cpath fill='currentColor' d='M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z' class=''%3E%3C/path%3E%3C/svg%3E");
+}

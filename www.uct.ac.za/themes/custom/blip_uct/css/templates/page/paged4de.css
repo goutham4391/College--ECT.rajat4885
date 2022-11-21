@@ -1,0 +1,14 @@
+/** Foundation for Sites Version 6.6.3 https://get.foundation Licensed under MIT Open Source */
+@media print, screen and (min-width: 64em) { .node--type-page.full .no-sidebar { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: calc(75% - 2rem); margin-left: 1rem; margin-right: 1rem; margin-left: auto; margin-right: auto; } }
+
+@media screen and (min-width: 75em) { .node--type-page.full .no-sidebar { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: calc(66.66667% - 2rem); margin-left: 1rem; margin-right: 1rem; margin-left: auto; margin-right: auto; } }
+
+.node--type-page.full > .node__content { margin: 1.5rem 0 0; }
+
+.node--type-page.full > .node__content > * + .field--name-field-aside { margin-top: 1rem; }
+
+@media print, screen and (min-width: 40em) { .node--type-page.full > .node__content { margin: 2rem 0 0; } }
+
+.node--type-page.full > .node__content .field--name-field-nodelib-ref-rev { display: none !important; visibility: hidden !important; }
+
+/*# sourceMappingURL=../../../maps/page/page.css.map */

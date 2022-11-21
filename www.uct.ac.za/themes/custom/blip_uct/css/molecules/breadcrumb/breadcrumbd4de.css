@@ -1,0 +1,19 @@
+nav.breadcrumb { color: #ffffff; }
+
+nav.breadcrumb a { color: #ffffff; margin-right: 0.5rem; }
+
+@media print, screen and (min-width: 40em) { nav.breadcrumb a { margin-right: 1rem; } }
+
+nav.breadcrumb ol { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; list-style: none; margin: 0; }
+
+nav.breadcrumb li { font-weight: 300; }
+
+@media print, screen and (min-width: 40em) { nav.breadcrumb li { font-size: 1.25rem; line-height: 1.2; } }
+
+nav.breadcrumb li:before { content: ""; display: inline-block; width: 1rem; height: 1rem; background-color: #ffffff; -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' class='svg-inline--fa fa-chevron-right fa-w-8 fa-5x'%3E%3Cpath fill='currentColor' d='M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z' class=''%3E%3C/path%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' class='svg-inline--fa fa-chevron-right fa-w-8 fa-5x'%3E%3Cpath fill='currentColor' d='M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z' class=''%3E%3C/path%3E%3C/svg%3E"); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; position: relative; line-height: 1; margin-right: 0.5rem; }
+
+@media print, screen and (min-width: 64em) { nav.breadcrumb li:before { margin-right: 1rem; } }
+
+nav.breadcrumb li:first-child:before { display: none; }
+
+/*# sourceMappingURL=../../../maps/breadcrumb/breadcrumb.css.map */

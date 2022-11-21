@@ -1,0 +1,7 @@
+.hero { color: #ffffff; color: var(--rw-background-color, #ffffff); border-left: 0.5rem solid #0098db; border-left: 0.5rem solid var(--rw-highlight-color, #0098db); padding: 0 0 0 1rem; }
+
+.hero .node__content { margin: 0.5rem 0 0 0; }
+
+@media print, screen and (min-width: 40em) { .hero .node__content { font-size: 1.25rem; line-height: 1.2; } }
+
+/*# sourceMappingURL=../../../maps/hero/hero.css.map */

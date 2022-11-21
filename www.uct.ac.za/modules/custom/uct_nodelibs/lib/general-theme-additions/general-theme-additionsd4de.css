@@ -1,0 +1,820 @@
+/* Typography overwrites | global */
+a:not([href]),
+a:not([href]):hover {
+  color: inherit;
+  cursor: text;
+}
+
+a[disabled] {
+  pointer-events: none;
+  cursor: default;
+}
+
+.node--type-contact.full .node__aside .field a[href],
+.node--type-contact.full .node__content section a[href] {
+  color: var(--rw-link-color, #0076d1);
+}
+
+/* Extending contrast checker styling to buttons and text on Mobile */
+@media print, screen and (max-width: 39.9988em) {
+  .global-navigation-menu__label[style="--rw-text-color: #ffffff;"] + button,
+  .global-navigation-menu__label[style="--rw-text-color: #ffffff;"] + button + ul {
+    --rw-text-color: #ffffff;
+  }
+}
+/* Appling paragraph title styling to upcoming event paragraph title */
+.field__item > .paragraph--type--upcoming-events > h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Mastheader on mobile added white opacity overlay between background and title to improve contrast | global */
+@media print, screen and (max-width: 87.5rem) {
+  #page--landing-banner:not(.landing-banner--co-brand) {
+    position: relative;
+    z-index: 2;
+  }
+  #page--landing-banner:not(.landing-banner--co-brand)::after {
+    content: '';
+    display: block;
+    background-color: rgba(255,255,255, .90);
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+/* Removing margin top on front/home pages */
+.path-frontpage .node--type-page.full > div.node__content,
+body[class*="-home"] .node--type-page.full > div.node__content {
+  margin-top: 0;
+}
+
+/*  
+  Tightening up spacing around Masthead, Hero and aside menu for smaller sized screens
+*/
+div#uct-landing-banner-block {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#uct-landing-banner-block > a {
+  height: min(25vw, 200px);
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-height: 56.25rem) {
+  /* div#uct-landing-banner-block {
+    height: min(25vw, 180px);
+  } */
+  
+  div.block-uct-domain-menu-active-domain-sidebar-menu-block.block-region--sidebar-first {
+    padding: 2rem 0 2rem 1rem;
+  }
+  
+  div#hero {
+    padding: 2.75rem 0;
+  }
+  
+  #uct-landing-banner-block h1,
+  #uct-landing-banner-block .h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 
+  Article content type body spacing adjustment if UCT News iframe is present in body.
+   - Works in combination with javascript that detects UCT News iframe in article content type body.
+*/
+@media print, screen and (min-width: 64em) {
+  .node--type-article.full > .node__content > .node__meta + .node__main.UCTNews-iframe,
+  .UCTNews-iframe .tex2jax_process > iframe {
+    margin-top: 0;
+  }
+}
+
+/* 
+
+Highlight colours extend | global
+
+*/
+.teaser--contact[class]:hover, 
+.teaser--summary--contact[class]:hover {
+  border-bottom: 3px var(--rw-link-color, #0076d1) solid;
+}
+
+/* 
+  Audio component label center align | Global
+*/
+.audiofield-player > label {
+  text-align: center;
+}
+/* 
+  Homepage content sections 
+*/
+.homepage-content__image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.homepage-content-text > p {
+  margin: 1.25rem 0 0 0;
+}
+
+.homepage-content-text {
+  margin: 0 .75rem;
+}  
+
+.homepage-content-text .homepage-content-list {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 40em) {
+  .homepage-content-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .homepage-content-section.img-left {
+    flex-direction: row-reverse;
+  }
+
+  .homepage-content__image img {
+    max-height: 600px;
+  }
+
+  .homepage-content__text,
+  .homepage-content__image {
+    width: 50%;
+  }
+
+  .homepage-content-text {
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+  }
+
+  .img-left .homepage-content__text::before {
+    right: 0;
+  }
+
+  .img-left .homepage-content-text {
+    text-align: left;
+  }
+
+  .homepage-content-text .homepage-content-list {
+    margin-top: 2rem;
+  }
+
+  /* 
+    homepage-content text background colour classes 
+  */
+
+  .homepage-content-section.homepage-content-section--text-bg {
+    padding: 4rem 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .homepage-content-section--text-bg,
+  .homepage-content-section--text-bg .homepage-content-text,
+  .homepage-content__image {
+    position: relative;
+  }
+
+  .homepage-content-section--text-bg .homepage-content__text,
+  .homepage-content-section--text-bg .homepage-content__text a {
+    color: #fff;
+  }
+
+  .homepage-content-section--text-bg .homepage-content__text::before {
+    content: '';
+    width: 80%;
+    height: calc(100%);
+    background-color: var(--rw-primary-color);
+    position: absolute;    
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+
+  .homepage-content-section--text-bg.text-bg--light-grey .homepage-content__text::before {
+    background-color: #EEEEEE;
+  }
+
+  .homepage-content-section--text-bg.text-bg--grey .homepage-content__text::before {
+    background-color: #626262;
+  }
+
+  .homepage-content-section--text-bg.text-bg--light-grey .homepage-content__text {
+    color: inherit;
+  }
+
+  .homepage-content-section--text-bg.text-bg--light-grey .homepage-content__text a {
+    color: var(--rw-link-color, #0076d1);
+  }
+  
+}
+
+@media screen and (min-width: 64em) {
+  .homepage-content-text {
+    width: 60%;
+    margin: 0 2rem 0 auto;
+  }
+  .img-left .homepage-content-text {
+    margin: 0 auto 0 2rem;
+  }
+}
+
+/* Homepage upcoming events | Hide every event item expect the first 3 */
+.path-frontpage .paragraph--type--upcoming-events .views-row:nth-child(n + 4) {
+  display: none;
+}
+
+/* Margin top on first event item in Upcoming event compontent */
+.paragraph--type--upcoming-events .node--type-event.teaser:first-child {
+  margin-top: 1.5rem;
+}
+
+/* Carousel hide additional null slide counters when clicking back in browser | global */
+.album-carousel-wrapper .slick__arrow > .slider-count:nth-child(n + 4) {
+  display: none;
+}
+
+/* Carousel counter divider force colour to white */
+.album-carousel .slick__arrow .slider-count span#divider, 
+.slick--optionset--carousel .slick__arrow .slider-count span#divider {
+  color: #fff;
+}
+
+/* Carousel counter: reduce spacing when only one slide */
+@media print, screen and (max-width: 64em) {
+  .album-carousel .slider-count:only-child {
+    margin: 0 -1rem;
+  }
+  
+}
+
+/* Carousel counter: hide counter when only one slide */
+.slider-count {
+  display: none;
+}
+
+.slick-arrow + .slider-count {
+  display: block;
+}
+
+/* figure element | remove top margin if first-child*/
+.text-formatted figure:first-child, 
+.text-formatted figure.figure-center:first-child {
+  margin-top: 0;
+}
+
+/* image icons */
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.googlescholar,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.researchgate,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.vula,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.libraries,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.libraries-colour {
+  display: block;
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.google-scholar:after,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.researchgate:after,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.vula:after,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.libraries:after,
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.libraries-colour:after {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2rem;
+  height: 3rem;
+  display: block;
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.googlescholar:after {
+  background-image: url("../../../../../sites/default/files/uct_ac_za/google_scholar.png");
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.researchgate:after {
+  background-image: url("../../../../../sites/default/files/uct_ac_za/google_scholar.png");
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.vula:after {
+  background-image: url("../../../../../sites/default/files/uct_ac_za/vula.png");
+  width: 1.7rem;
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.libraries:after {
+  background-image: url("../../../../../sites/default/files/uct_ac_za/libraries-icon-white.png");  
+}
+
+.page-footer .footer-message .social-media-list-wrapper .social-media-link.libraries-colour:after {
+  background-image: url("../../../../../sites/default/files/uct_ac_za/libraries-icon.png");
+}
+
+/* 
+Contact icons
+*/
+
+.node--type-contact.full .node__aside .social-media-list--item a.facebook::after,
+.node--type-contact.full .node__aside .social-media-list--item a.linkedin::after,
+.node--type-contact.full .node__aside .social-media-list--item a.twitter::after,
+.node--type-contact.full .node__aside .social-media-list--item a.youtube::after {
+  background-image: none;
+  mask-image: unset;
+  background-color: transparent !important;
+  -webkit-mask-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.node--type-contact.full .node__aside .social-media-list--item a.instagram::after {
+  background-image: none;
+  background-color: transparent !important;
+  color: #000;  
+  font-family: "Font Awesome 5 brands", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  mask-image: none;
+  -webkit-mask-image: none;
+  height: 2rem;
+  width: 2rem;  
+}
+
+/* .node--type-contact.full .node__aside .social-media-list--item a.facebook::after {
+  content: "\f39e";
+}
+
+.node--type-contact.full .node__aside .social-media-list--item a.linkedin::after {
+  content: "\f0e1";
+}
+
+.node--type-contact.full .node__aside .social-media-list--item a.twitter::after {
+  content: "\f099";
+}
+
+.node--type-contact.full .node__aside .social-media-list--item a.youtube::after {
+  content: "\f167";
+} */
+
+.node--type-contact.full .node__aside .social-media-list--item a.instagram::after {
+  content: "\f16d";
+}
+
+
+/* 
+Removing Upcoming event filter on default and subsite home pages | global
+*/
+.path-frontpage .view-uct-events-upcoming .view-filters,
+body[class*="-home"] .view-uct-events-upcoming .view-filters {
+  display: none;
+}
+
+/* 
+Aside nav | hide first level menu item and their sub menus if not active
+*/
+@media print, screen and (min-width: 64em) {
+  /* .region-sidebar-first.sidebar--active .block-uct-domain-menu > .menu > .menu-item > a:not(.is-active) {
+    display: none;
+  } */
+
+  /* .region-sidebar-first.sidebar--active .block-uct-domain-menu > .menu > .menu-item > .menu {
+    margin-left: 0;
+  } */
+}
+
+/* 
+Social media embed removing margin left | global
+*/
+.embedded-social-media-content[class] {
+  margin: 0;
+}
+
+/* 
+-------------------
+Header nav styling | global
+-------------------
+#uct-landing-banner-block--section-template-menu
+.section-template-menu
+*/
+
+#block-uctmastheadbanner {
+  position: relative;
+}
+
+#uct-landing-banner-block--section-template-menu {
+  display: none;
+}
+
+#uct-landing-banner-block #uct-landing-banner-block--section-template-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255,255,255, .95);
+  text-align: right;
+}
+
+/* Header nav styling | global */
+.section-template-menu .menu > .menu-item {
+  position: relative;
+}
+
+.section-template-menu .menu-item > .menu {
+  background-color: #f7f8f9;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.section-template-menu .menu-item.open > .menu {
+  display: block;
+  z-index: 1000;
+}
+
+.section-template-menu .menu-item a {
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  filter: none;
+}
+
+#uct-landing-banner-block .section-template-menu .menu-item a:hover,
+#uct-landing-banner-block .section-template-menu .menu-item.open > a {
+  background-color: var(--rw-primary-color);
+  color: #fff;
+}
+
+/* icons */
+.section-template-menu .menu-item.is-parent > a:after,
+.section-template-menu .menu-item a[download]:after,
+.section-template-menu .menu-item a.is-external:after {
+  content: "";
+  display: block;
+  color: currentColor;
+  position: absolute;
+  right: .5rem;
+  top: 50%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  background: currentColor;
+  transform: translateY(-50%);
+  
+}
+
+.section-template-menu .menu-item.is-parent > a,
+.section-template-menu .menu-item a[download],
+.section-template-menu .menu-item a.is-external {
+  padding-right: 2rem;
+}
+
+.section-template-menu .menu-item a[download]:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='download' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='svg-inline--fa fa-download fa-w-16 fa-5x'%3E%3Cpath fill='currentColor' d='M452 432c0 11-9 20-20 20s-20-9-20-20 9-20 20-20 20 9 20 20zm-84-20c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm144-48v104c0 24.3-19.7 44-44 44H44c-24.3 0-44-19.7-44-44V364c0-24.3 19.7-44 44-44h99.4L87 263.6c-25.2-25.2-7.3-68.3 28.3-68.3H168V40c0-22.1 17.9-40 40-40h96c22.1 0 40 17.9 40 40v155.3h52.7c35.6 0 53.4 43.1 28.3 68.3L368.6 320H468c24.3 0 44 19.7 44 44zm-261.7 17.7c3.1 3.1 8.2 3.1 11.3 0L402.3 241c5-5 1.5-13.7-5.7-13.7H312V40c0-4.4-3.6-8-8-8h-96c-4.4 0-8 3.6-8 8v187.3h-84.7c-7.1 0-10.7 8.6-5.7 13.7l140.7 140.7zM480 364c0-6.6-5.4-12-12-12H336.6l-52.3 52.3c-15.6 15.6-41 15.6-56.6 0L175.4 352H44c-6.6 0-12 5.4-12 12v104c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12V364z' class=''%3E%3C/path%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='download' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='svg-inline--fa fa-download fa-w-16 fa-5x'%3E%3Cpath fill='currentColor' d='M452 432c0 11-9 20-20 20s-20-9-20-20 9-20 20-20 20 9 20 20zm-84-20c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm144-48v104c0 24.3-19.7 44-44 44H44c-24.3 0-44-19.7-44-44V364c0-24.3 19.7-44 44-44h99.4L87 263.6c-25.2-25.2-7.3-68.3 28.3-68.3H168V40c0-22.1 17.9-40 40-40h96c22.1 0 40 17.9 40 40v155.3h52.7c35.6 0 53.4 43.1 28.3 68.3L368.6 320H468c24.3 0 44 19.7 44 44zm-261.7 17.7c3.1 3.1 8.2 3.1 11.3 0L402.3 241c5-5 1.5-13.7-5.7-13.7H312V40c0-4.4-3.6-8-8-8h-96c-4.4 0-8 3.6-8 8v187.3h-84.7c-7.1 0-10.7 8.6-5.7 13.7l140.7 140.7zM480 364c0-6.6-5.4-12-12-12H336.6l-52.3 52.3c-15.6 15.6-41 15.6-56.6 0L175.4 352H44c-6.6 0-12 5.4-12 12v104c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12V364z' class=''%3E%3C/path%3E%3C/svg%3E");
+}
+.section-template-menu .menu-item a.is-external:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='external-link-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='svg-inline--fa fa-external-link-alt fa-w-16 fa-5x'%3E%3Cpath fill='currentColor' d='M440,256H424a8,8,0,0,0-8,8V464a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V112A16,16,0,0,1,48,96H248a8,8,0,0,0,8-8V72a8,8,0,0,0-8-8H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V264A8,8,0,0,0,440,256ZM480,0h-.06L383.78.17c-28.45,0-42.66,34.54-22.58,54.62l35.28,35.28-265,265a12,12,0,0,0,0,17l8.49,8.49a12,12,0,0,0,17,0l265-265,35.28,35.27c20,20,54.57,6,54.62-22.57L512,32.05A32,32,0,0,0,480,0Zm-.17,128.17-96-96L480,32Z' class=''%3E%3C/path%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='external-link-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='svg-inline--fa fa-external-link-alt fa-w-16 fa-5x'%3E%3Cpath fill='currentColor' d='M440,256H424a8,8,0,0,0-8,8V464a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V112A16,16,0,0,1,48,96H248a8,8,0,0,0,8-8V72a8,8,0,0,0-8-8H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V264A8,8,0,0,0,440,256ZM480,0h-.06L383.78.17c-28.45,0-42.66,34.54-22.58,54.62l35.28,35.28-265,265a12,12,0,0,0,0,17l8.49,8.49a12,12,0,0,0,17,0l265-265,35.28,35.27c20,20,54.57,6,54.62-22.57L512,32.05A32,32,0,0,0,480,0Zm-.17,128.17-96-96L480,32Z' class=''%3E%3C/path%3E%3C/svg%3E");
+}
+
+.section-template-menu .menu-item.is-parent > a:after {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class='svg-inline--fa fa-chevron-up fa-w-14 fa-5x'%3E%3Cpath fill='currentColor' d='M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z' class=''%3E%3C/path%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fal' data-icon='chevron-up' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class='svg-inline--fa fa-chevron-up fa-w-14 fa-5x'%3E%3Cpath fill='currentColor' d='M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z' class=''%3E%3C/path%3E%3C/svg%3E");
+  transition: all 0.2s ease-in-out;  
+}
+
+.section-template-menu .menu-item.open > a:after {
+  transform: translateY(-50%) rotate(-180deg);
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 40rem) {
+  section#page--landing-banner {
+    min-height: 46px;
+    position: relative;
+  }
+    
+  #uct-landing-banner-block--section-template-menu {
+    display: block;
+  }
+  .menu-item__header-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  div#uct-landing-banner-block {
+    flex-direction: column;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  #uct-landing-banner-block #uct-landing-banner-block--section-template-menu {
+    position: relative;
+    align-self: end;
+  }
+
+  #uct-landing-banner-block > a {
+    order: 2;
+    align-self: start;
+  }
+}
+
+/* 
+-------------------
+END Header nav styling 
+------------------- 
+*/
+
+
+/*
+--------------------
+Detail html styled similarly to accordions
+--------------------
+*/
+.text-formatted details {
+  margin: 1rem 0;
+  overflow: hidden;
+  border: 1px solid hsl(205,84%,12%);
+  border-radius: 8px;
+}
+
+.text-formatted details[open] {
+  padding: 1rem;
+}
+
+.text-formatted summary {
+  background-color: hsl(205,84%,12%);
+  color: #fff;
+  padding: 0.3125rem 1.25rem;
+}
+
+.text-formatted [open] summary {
+  background: hsl(205,84%,25%);
+  margin: -1rem -1rem 1rem; 
+}
+
+.text-formatted summary:hover {
+  background-color: hsl(205,84%,18%);
+}
+
+/* 
+--------------------
+Utility Classes 
+--------------------
+*/
+.max-width-container {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  .max-width-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* Compact list style */
+.text-formatted ul.compact > li:not(:first-child),
+.text-formatted ol.compact > li:not(:first-child)  {
+  margin-top: .25rem;
+}
+
+/* single row grid mobile 1 medium 2 large 4 */
+.card-grid-row {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+.card-grid-item {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0, .15);
+  transition: box-shadow 0.2s ease-in;
+  border-radius: 6px;
+}
+
+.card-grid-item p:last-child {
+  margin-top: auto;
+}
+
+.card-grid-item p:last-child .button {
+  margin: 0;
+}
+
+.card-grid-item:hover {
+  box-shadow: 0px 3px 3px 1px rgba(0,0,0, .15);
+}
+
+@media print, screen and (min-width: 40em) {
+  .card-grid-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media print, screen and (min-width: 64em) {
+  .card-grid-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Home page text on image banner */
+.homepage-text-image-banner {
+  position: relative;
+}
+
+.text-formatted .homepage-text-image-banner > h1,
+.text-formatted .homepage-text-image-banner > h2,
+.text-formatted .homepage-text-image-banner > h3,
+.homepage-text-image-banner .above-image {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  width: 100%;
+  height: fit-content;
+}
+
+.homepage-text-image-banner .behind-text {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage-text-image-banner .behind-text > article,
+.homepage-text-image-banner .behind-text > article > div {
+  display: contents;
+}
+
+.homepage-text-image-banner .behind-text > article > div > img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+/* 
+--------------------
+END Utility Classes 
+--------------------
+*/
+
+/* 
+--------------------
+Footer overwrites
+--------------------
+*/
+.page-footer .footer-message a.button {
+  padding: 0.85em 1em;
+}
+
+/* 
+--------------------
+Webform pager progress bar | global
+--------------------
+*/
+.node__content .webform-progress-tracker .progress-step {
+  position: relative;
+}
+
+.node__content .webform-progress-tracker .progress-marker {
+  margin: 0 auto;
+  position: static;
+}
+
+.node__content .webform-progress-tracker .progress-marker::after {
+  width: 100%;
+}
+
+/* 
+--------------------
+Layout CSS
+--------------------
+*/
+/* 
+Components right aside
+--------------------
+Contact group | Card and Teaser display 
+*/
+.paragraphs__aside .view-display-id-bk_contacts_card_by_pid .view-content > .col,
+.paragraphs__aside .view-display-id-bk_contacts_teaser_by_pid .view-content > .col {
+  width: calc(100% - 1.25rem);
+}
+
+
+/* 
+--------------------
+Domain | Sites specific stylings
+--------------------
+ */
+
+/* uct.ac.za | body class domain--1423604 :not([class*="--staff"]):not([class*="--students"])*/
+
+/* Hide Mastheader and navigation aside | Remove when new menu is released */
+.domain--1423604 #uct-landing-banner-block > a[href="/"] {
+  display: none;
+}
+/* END uct.ac.za | body class domain--1423604 */
+
+
+/* Commerce.uct.ac.za | body class domain--2256158 */
+/* 
+  resolving text and icon colour contrast issues 
+   - should reworking this into something more robust for all contrast issues
+*/
+@media print, screen and (min-width: 40em) {
+  .domain--2256158 #block-uctdomainmenuactivedomainsubsitemenu.block-region--primary-menu .menu-item a {
+    color: var(--rw-text-color);
+  }
+
+  .domain--2256158 #block-uctdomainmenuactivedomainsubsitemenu.block-region--primary-menu .menu-item a:after {
+    background-color: currentColor;
+  }  
+}
+
+@media print, screen and (max-width: 39.99875em) {
+  .domain--2256158 .global-navigation-menu__list.accordion-menu ul[region="primary_menu"] a {
+    color: #000;
+  }
+  .domain--2256158 .global-navigation-menu .submenu-toggle:after {
+    background-color: currentColor;
+  }
+  .domain--2256158 .global-navigation-menu__list.accordion-menu .is-submenu-item:first-child > a,
+  .domain--2256158 .global-navigation-menu__list.accordion-menu .is-submenu-item a,
+  .domain--2256158 .global-navigation-menu .submenu-toggle {
+    border-color: currentColor;
+  }
+}
+
+/* Carousel slides */
+@media print, screen and (min-width: 64em) {
+  .domain--2256158 .album-carousel .slick__arrow .slider-count {
+    color: #000;
+  }
+  
+}
+.domain--2256158 .carousel-slide .node__title,
+.domain--2256158 .carousel-slide .text-formatted {
+  color: #000;
+}
+
+/* Article node header title */
+.domain--2256158 .node--type-article.full > .node__header > .node__title {
+  color: #000;
+}
+
+/* stayandconnect.uct.ac.za | body class domain--4054615 */
+@media print, screen and (min-width: 40em) {
+  .domain--4054615 .menu[region="footer_first"] a {
+    color: var(--rw-link-color, var(--rw-text-color, #fff));
+  }
+}
+
+
+/* science.uct.ac.za/scientific-computing | body class domain--10799068  */
+@media print, screen and (min-width: 40em) {
+  .domain--10799068[class*="alias--scientific-computing"] .block-uct-domain-menu-active-domain-menu-block.block-region--primary-menu > .menu > .menu-item {
+    min-width: 6.5rem;
+  }
+}
+
+
+/* Remove contrast fix on specific subsites */
+.domain--10799068[class*="alias--school-information-technology"] #page--landing-banner::after,
+.domain--1423604[class*="alias--researcher-development-academy"] #page--landing-banner::after,
+.domain--10799068[class*="alias--department-biological-sciences"] #page--landing-banner::after,
+.domain--14902372 #page--landing-banner::after,
+.domain--7331930 #page--landing-banner::after{
+    display: none;
+}
+
+/* Specific to this page https://health.uct.ac.za/nish/training | Hiding Upcoming event filter */
+.page-node-57268 .view-uct-events-upcoming .view-filters {
+  display: none;
+}

@@ -1,0 +1,19 @@
+/*
+Global (Font)
+
+Font families
+
+Markup:  
+  <div class="font-family--base">This text is displayed using the base font family, Roboto, sans-serif</div>
+  <div class="font-family--heading">This text is displayed using the heading font family: Montserrat, sans-serif</div>
+  <div class="font-family--heading">This text is displayed using the monospace font family: Consolas, 'Liberation Mono', Courier, monospace</div>
+
+Styleguide Atoms.1
+*/
+.font-family--base { font-family: "Roboto", sans-serif; }
+
+.font-family--heading { font-family: "Montserrat", sans-serif; }
+
+.font-family--monospace { font-family: Consolas, "Liberation Mono", Courier, monospace; }
+
+/*# sourceMappingURL=../../../maps/global/fonts.css.map */

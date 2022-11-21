@@ -1,0 +1,24 @@
+jQuery(document).ready(function($){
+
+  $('.iWantSelect').on('change', function() {
+    $('[name="select_choice"]').val(this.value);
+  });
+  
+  $('.i-am-submit-btn').on('click', function(e){
+    e.preventDefault();
+    var selectionVal = $('[name="select_choice"]').val();
+    if (typeof ga === 'function') {
+
+      ga('send', 'event', 'I am I want ' + window.location.href, 'submit', selectionVal, {
+        hitCallback: function() {
+          window.location = selectionVal;
+        }
+      });
+
+    } else {
+      window.location = selectionVal;
+    }
+    
+  });
+  
+});

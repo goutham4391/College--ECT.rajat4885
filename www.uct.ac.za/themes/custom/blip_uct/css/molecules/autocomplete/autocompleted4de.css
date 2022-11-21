@@ -1,0 +1,7 @@
+.autocomplete.node--view-mode-autocomplete { padding: 1rem; }
+
+.autocomplete.node--view-mode-autocomplete .node__title { font-size: 1rem; font-weight: bold; }
+
+.autocomplete.node--view-mode-autocomplete .node__type { text-transform: capitalize; color: #a5a5a5; font-size: 0.875rem; }
+
+/*# sourceMappingURL=../../../maps/autocomplete/autocomplete.css.map */

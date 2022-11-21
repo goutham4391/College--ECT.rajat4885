@@ -1,0 +1,25 @@
+/* Fullwidth container */
+.UCT-fullwidth-container {
+  margin: 0 -0.75rem;
+}
+@media screen and (min-width: 40em) {
+  .UCT-fullwidth-container {
+    margin: 0 -1rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .UCT-fullwidth-container {
+    width: 100vw;
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .UCT-fullwidth-container {
+    width: 120rem;
+    margin-left: calc(-60rem + 50%);
+  }
+}

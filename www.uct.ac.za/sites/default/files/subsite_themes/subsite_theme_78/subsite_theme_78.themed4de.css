@@ -1,0 +1,16 @@
+/** 
+ * @file 
+ * Default styles for the 'Research Support Hub' (78) subsite theme 
+ * 
+ * Note: Do not modify this file as it will be overwritten. 
+ * 
+ * To add custom CSS and/or more custom properties, use libraries-extend 
+ * from your theme, to extend: uct_themer/subsite_theme_78 
+ */ 
+
+a {
+  color: var(--rw-link-color);
+}
+body {
+}
+

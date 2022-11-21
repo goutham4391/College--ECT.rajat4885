@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Default styles for the landing page banner
+ */
+
+/* #page--masthead-banner {
+  width: 100%;
+  background-color: var(--rw-secondary-color);
+  background-size: 50vh;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: var(--rw-landing-background-image);
+  color: var(--rw-background-color);
+} */
+
+#page--landing-banner {
+  background-image: var(--rw-landing-background-image);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+

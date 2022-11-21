@@ -1,0 +1,3 @@
+.region-sidebar-first .block-uct-domain-menu > .menu :not(.is-active) + .menu {
+  display: none;
+}

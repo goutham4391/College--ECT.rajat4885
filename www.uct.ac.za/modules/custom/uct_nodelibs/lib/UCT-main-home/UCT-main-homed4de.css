@@ -1,0 +1,572 @@
+/* Hide Mastheader and navigation aside */
+#uct-landing-banner-block,
+#sidebar-first {
+  display: none;
+}
+
+/* Remove margin between navigation and main content section */
+.node--type-page.full > div.node__content {
+  margin-top: 0;
+}
+
+/* Removing container side margins */
+.main-content.grid-container {
+  padding-right: 0;
+  padding-left: 0;
+  z-index: 0;
+}
+
+/* Set content section to 100% width */
+section.section-main.large-9 {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  .main-content.grid-container {
+    max-width: none;
+  }
+}
+
+/* I am I want homepage */
+.rw-paragraph--webform--wrapper {
+  background-color: #F6F6F6;
+  box-shadow: 0  -0.0625rem 0.125rem 0 rgba(0,0,0, .30);
+}
+/* I am I want homepage END */
+
+/* Spacing */
+.homepage-content-section {
+  margin: 2.875rem 0 1.4375rem;
+}
+
+#albumCarousel_1 {
+  margin: 3.75rem 0 4.125rem;
+}
+
+#albumCarousel_2 {
+  margin: 2.1875rem 0 1.4375rem;
+}
+
+.rw-paragraph--webform--wrapper {
+  padding: .5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.field--name-field-components > .field__item:last-child {
+  margin-bottom: 2rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  .homepage-content-section {
+    margin: 5.5rem 0;
+  }
+  
+  #albumCarousel_1 {
+    margin: 5.875rem 0;
+  }
+  
+  #albumCarousel_2 {
+    margin: 5.875rem 0 4.8125rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .rw-paragraph--webform--wrapper {
+    padding: 4rem 0;
+  }
+}
+
+/* Spacing removal */
+.view-uct-articles .view-filters {
+  margin-bottom: 0;
+}
+
+.field--name-field-components > .field__item:first-child,
+.field--name-field-components > .field__item:first-child + .field__item,
+.field--name-field-components > .field__item:first-child + .field__item + .field__item {
+  margin: 0;
+}
+/* Spacing END */
+
+/* background patterns */
+@media screen and (min-width: 60em) {
+  .paragraph--type--rw-wysiwyg {
+    position: relative;
+  }
+
+  #albumCarousel_1,
+  #albumCarousel_2 {
+    z-index: 1;
+  }
+
+  .field__item:nth-child(5),
+  .field__item:nth-child(8),
+  .field__item:nth-child(11) {
+    position: relative;
+  }
+
+  .field__item:nth-child(5)::before,
+  .field__item:nth-child(8)::before,
+  .field__item:nth-child(11)::before {
+    display: block;
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: contain;
+  }
+
+  .field__item:nth-child(5)::before {
+    background-image: url("../../../../../sites/default/files/uct_ac_za/homepage-section-pattern-3-v2.png");
+    background-size: 100%;
+    background-position: left;
+    width: calc(1396px * 2.6);
+    height: calc(430px * 2.6);
+    top: 65%;
+    left: -35vw;  
+    transform: translateY(-50%);
+    opacity: .5;
+  }
+
+  .field__item:nth-child(8)::before {
+    background-image: url("../../../../../sites/default/files/uct_ac_za/homepage-section-pattern-1.svg");
+    background-position: right;
+    width: 2453px;
+    height: 1521px;
+    top: 50%;
+    left: 0;
+    transform: translate(-80%, -50%);
+    background-repeat: space;
+  }
+
+  .field__item:nth-child(11):before {
+    background-image: url("../../../../../sites/default/files/uct_ac_za/homepage-section-pattern-2.svg");
+    background-position: center;
+    width: calc(437px * 1.5);
+    height: calc(976px * 1.5);
+    top: 75%;
+    right: -4rem;  
+    transform: translateY(-50%);
+    opacity: .5;
+  }
+
+  #footer {
+    z-index: 1;
+  }
+
+}
+/* background patterns END*/
+
+/* Slider home page styles */
+.album-carousel-wrapper {
+  background: var(--rw-primary-color, #00243a);
+}
+
+.album-carousel-wrapper .slick-initialized .slick-slide {
+  overflow: hidden;
+}
+
+div.paragraph--type--uct-multi-content-reference .view-display-id-content_reference_carousel {
+  margin-bottom: 0;
+}
+
+div.album-carousel  .carousel-slide .field--name-field-media-image img {
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media print, screen and (min-width: 64em) {
+  .album-carousel-wrapper {
+    background: transparent;
+  }
+  article.carousel-slide .node__content {
+    max-width: 41%;
+    margin-left: 9%;
+  }
+  .album-carousel .carousel-slide::before {
+    background-image: url("../../../../../sites/default/files/uct_ac_za/slide--graphic.png");
+    background-position: center top;
+    background-size: 117% auto;
+    background-repeat: no-repeat;
+    height: calc(26% / 0.5625);
+  }
+}
+
+/* Main slider(first component) | Remove count and poistion arrows on slide side  */
+@media print, screen and (min-width: 64em) {
+  
+  /* hide count */
+  .field--name-field-components .field__item:first-child div[class].slider-count {
+    display: none;
+  }
+
+  .field--name-field-components .field__item:first-child .album-carousel nav.slick__arrow, 
+  .field--name-field-components .field__item:first-child .slick--optionset--carousel nav.slick__arrow {
+    top: calc(50% - 1.5rem);
+    transform: none;
+    width: 100%;
+    left: auto;
+  }
+
+  .field--name-field-components .field__item:first-child .album-carousel button.slick-arrow, 
+  .field--name-field-components .field__item:first-child .slick--optionset--carousel button.slick-arrow {
+    filter: drop-shadow(1px 1px 3px rgba(0,0,0,.3));
+  }
+
+  .field--name-field-components .field__item:first-child .album-carousel button.slick-prev, 
+  .field--name-field-components .field__item:first-child .slick--optionset--carousel button.slick-prev {
+    left: 1rem;
+  }
+
+  .field--name-field-components .field__item:first-child .album-carousel button.slick-next, 
+  .field--name-field-components .field__item:first-child .slick--optionset--carousel button.slick-next {
+    right: 1rem;
+  }
+
+}
+
+/* Swap image and text */
+@media print, screen and (min-width: 64em) {
+
+  #albumCarousel_1 .carousel-slide,
+  #albumCarousel_2 .carousel-slide {
+    margin-right: 0;
+    margin-left: 15%;
+    align-items: flex-end;
+    padding: 3rem calc(10% + 6rem) 3rem 3rem;
+  }
+
+  #albumCarousel_1 .carousel-slide::before,
+  #albumCarousel_2 .carousel-slide::before {
+    left: initial;
+    right: 3rem;
+  }
+  #albumCarousel_1 .carousel-slide .field--name-field-media-image,
+  #albumCarousel_2 .carousel-slide .field--name-field-media-image {
+    right: initial;
+    left: -17.65%;
+  }
+
+  #albumCarousel_1 .carousel-slide .node__content,
+  #albumCarousel_2 .carousel-slide .node__content {
+    max-width: 45%;
+  }
+
+  .album-carousel#albumCarousel_1 .slick__arrow,
+  .album-carousel#albumCarousel_2 .slick__arrow {
+    left: initial;
+    right: 15%;
+  }
+  
+}
+/* Slider home page styles END*/
+
+/* Unleashed secton */
+.homepage-unleashed {
+  background-color: #00243a;
+  overflow: hidden;
+  background:  url("../../../../../sites/default/files/media/images/uct_ac_za/slide-colour-block.jpg") #00243a center no-repeat;
+  background-size: cover;
+}
+
+.homepage-unleashed__container {
+  position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 .75rem;      
+}
+
+.homepage-unleashed__intro,
+.homepage-unleashed__auto-scroll p {
+  margin: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.homepage-unleashed__intro {
+  font-size: 1.5rem;
+  padding: 1.5rem 0 0;
+  font-weight: 600;  
+  line-height: 1.2;
+}
+
+.homepage-unleashed__footer {
+  padding: 1rem 0;
+}
+
+.homepage-unleashed__auto-scroll {
+  flex: 1;
+}
+
+.homepage-unleashed__auto-scroll p {
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: .9;
+}
+
+.homepage-unleashed__auto-scroll p:first-child {
+  font-size: 3rem;
+}
+
+.scroll-1,
+.scroll-2,
+.scroll-3 {
+  font-size: 1.5rem;
+}
+
+.homepage-unleashed__vision2030 {
+  max-width: 30%;
+  margin-left: auto;
+  padding-top: 1.5rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  .homepage-unleashed__container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .homepage-unleashed__footer {
+    padding: 0 0 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .homepage-unleashed__auto-scroll p {
+    font-size: 3.5rem;
+  }
+
+  .homepage-unleashed__vision2030 {
+    max-width: 25%;
+    margin-left: initial;
+    padding-top: 0;
+  }
+}
+
+@media print, screen and (min-width: 90em) {
+  .homepage-unleashed__intro {
+    font-size: 3rem;
+    padding: 6.4rem 0 0;
+  }
+
+  .homepage-unleashed__auto-scroll p {
+    font-size: 6rem;
+  }
+
+  .homepage-unleashed__vision2030 {
+    max-width: unset;
+    margin-left: initial;
+    padding-top: 0;
+  }
+}
+
+.unleashed_scroll {
+  position: relative;
+  transform: translateX(100vw);
+  height: 0;
+  visibility: hidden;
+}
+
+.homepage-unleashed__auto-scroll {
+  --initial-delay: 1s;
+  --animtion-duration: 9s;
+  --total-duration: calc(var(--animtion-duration)*3);
+}
+
+.scroll-1,
+.scroll-2,
+.scroll-3 {
+  animation-name: scroll;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.scroll-1 {      
+  animation-duration: var(--total-duration);
+  animation-delay: var(--initial-delay);      
+}
+
+.scroll-2 {
+  animation-duration: var(--total-duration);
+  animation-delay: calc( var(--initial-delay) + var(--animtion-duration));
+}
+
+.scroll-3 {
+  animation-duration: var(--total-duration);
+  animation-delay: calc( var(--initial-delay) + (var(--animtion-duration) * 2) );
+}
+
+/* animations */
+@keyframes scroll {
+  0% {
+    visibility: visible;
+  }
+  /* animation to holding location */
+  8% {
+    transform: translateX(0);
+  } 
+  18% {transform: translateX(0);} /* holding until */
+  30% {transform: translateX(-100vw);} /* animation from holding location */
+  100% {transform: translateX(-100vw);} /* waiting for other animations to end */
+}
+/* Unleashed secton */
+
+/* Mirco view and Multi content ref component grid view display*/
+.paragraph--type--uct-micro-view .views-view-grid,
+.paragraph--type--uct-multi-content-reference .views-view-grid {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}    
+
+.paragraph--type--uct-micro-view article.teaser,
+.paragraph--type--uct-multi-content-reference .views-view-grid article.teaser {
+  background: transparent;
+}
+
+@media print, screen and (min-width: 40em) {
+  .paragraph--type--uct-micro-view .views-view-grid,
+  .paragraph--type--uct-multi-content-reference .views-view-grid {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* Grid Teaser Display mode  */
+.node--type-article.teaser .node__content:first-child {
+  padding-left: 7.25rem;
+  position: relative;
+  min-height: 6.25rem;
+}
+
+.node--type-article.teaser .node__content:first-child::before {
+  width: 6.25rem;
+  position: absolute;
+  height: 6.25rem;
+  left: 0;
+}
+/* Mirco view component END */
+
+/* Homepage buttons */
+.homepage-uctnews-button {
+  text-align: center;
+  margin: 1rem 0 0;
+}
+
+.homepage-button-columns {
+  padding: 0 0.75rem;
+  max-width: 90rem;
+  margin: auto;
+}
+
+.homepage-button {
+  text-align: center;
+}
+
+@media print, screen and (min-width: 60em) {
+  .homepage-button-columns {
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .homepage-button {
+    width: 50%;
+    text-align: right;
+  }
+}
+/* Homepage buttons END */
+
+/* UCT News iframe section */
+.field__item .rw-paragraph--title {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/* @media print, screen and (min-width: 40em) {
+  .field__item:nth-child(11) .rw-paragraph--title,
+  .field__item:nth-child(11) .rw-paragraph--wysiwyg {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+} */
+/* END UCT News iframe section */
+
+/* Events and Notices */
+.field__item > .paragraph--type--upcoming-events,
+.field--name-field-components > .field__item:nth-last-child(1) .rw-paragraph--title,
+.field--name-field-components > .field__item:nth-last-child(1) .rw-paragraph--wysiwyg {
+  padding: 0 .75rem;
+}
+
+.rw-paragraph--wysiwyg .teaser {
+  background-color: transparent;
+}
+
+.field__item > .paragraph--type--upcoming-events > h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media print, screen and (min-width: 60em) {
+
+  .field--name-field-components > .field__item:nth-last-child(1),
+  .field--name-field-components > .field__item:nth-last-child(2) {
+    width: 50%;
+    display: inline-block;
+    margin: 0 -0.125rem;
+    vertical-align: top;
+  }
+
+  .field--name-field-components > .field__item:nth-last-child(2) .paragraph--type--upcoming-events,
+  .field--name-field-components > .field__item:nth-last-child(1) .rw-paragraph--noticeboard--wrapper,
+  .field--name-field-components > .field__item:nth-last-child(1) .rw-paragraph--wysiwyg {
+    max-width: 45rem;
+    padding: 0 1rem;
+  }
+
+  /* Events container */
+  .field--name-field-components > .field__item:nth-last-child(2) .paragraph--type--upcoming-events {
+    margin-left: auto;
+  }
+
+  /* Notices container */
+  .field--name-field-components > .field__item:nth-last-child(1) .rw-paragraph--noticeboard--wrapper,
+  .field--name-field-components > .field__item:nth-last-child(1) .rw-paragraph--wysiwyg {
+    margin-right: auto;
+  }
+
+}
+
+/* Typography */
+.node--type-event.teaser .field--type-text-with-summary p {
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.text-formatted > .tex2jax_process .node--type-event.teaser .h6 {
+  margin-top: 0;
+}
+
+.teaser.node--type-event .node__meta > .button:first-child {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  top: 0;
+}
+
+/* Events and Notices END */

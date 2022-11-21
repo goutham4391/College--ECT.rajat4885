@@ -1,0 +1,9 @@
+.rw-paragraph--wysiwyg--quote.rw-paragraph--wysiwyg--quote--first { margin-top: 2.5rem; }
+
+@media print, screen and (min-width: 64em) { .rw-paragraph--wysiwyg--quote.rw-paragraph--wysiwyg--quote--first { margin-top: 0; } }
+
+@media print, screen and (min-width: 64em) { .rw-paragraph--wysiwyg--has-image > .cell:first-of-type .field--name-field-image-ref { margin-right: 1rem; } }
+
+@media print, screen and (min-width: 64em) { .rw-paragraph--wysiwyg--has-image > .cell:first-of-type .field--name-field-image-ref { margin-left: 1rem; } }
+
+/*# sourceMappingURL=../../../maps/wysiwyg/wysiwyg.css.map */

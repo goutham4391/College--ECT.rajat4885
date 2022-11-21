@@ -1,0 +1,41 @@
+.block-region--sidebar-first .menu a {
+    padding: 0.5rem 1rem;
+}
+
+div.block-uct-domain-menu-active-domain-sidebar-menu-block.block-region--sidebar-first .menu-item.is-parent > .menu {
+    margin-left: 1.5rem;
+}
+
+div.block-uct-domain-menu-active-domain-sidebar-menu-block.block-region--sidebar-first .menu-item {
+    font-size: .875rem;
+}
+
+@media screen and (min-width: 40em) {
+
+  /* Primary navigation size and spacing reduction */
+  div.block-uct-domain-menu-active-domain-menu-block.block-region--primary-menu > .menu > .menu-item.mega-menu > .menu {
+    font-size: .875rem;
+  }
+
+  div.block-uct-domain-menu-active-domain-menu-block.block-region--primary-menu > .menu > .menu-item > .menu > .menu-item > .menu > .menu-item > a {
+    padding: 1rem .5rem;
+  }
+
+  div.block-uct-domain-menu-active-domain-menu-block.block-region--primary-menu > .menu > .menu-item > .menu > .menu-item > .menu {
+    grid-template-rows: repeat(12, -webkit-min-content);
+    grid-template-rows: repeat(12, min-content);
+    gap: 0 1.5rem;
+  }
+
+  div.block-uct-domain-menu-active-domain-menu-block.block-region--primary-menu > .menu > .menu-item > .menu > .menu-item > .menu > .menu-item:nth-of-type(6n + 1) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  div.block-uct-domain-menu-active-domain-menu-block.block-region--primary-menu > .menu > .menu-item > .menu > .menu-item > .menu > .menu-item:nth-of-type(12n + 1) {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: var(--rw-text-color) 4px solid;
+  }
+}

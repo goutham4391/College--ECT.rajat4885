@@ -1,0 +1,34 @@
+/** Foundation for Sites Version 6.6.3 https://get.foundation Licensed under MIT Open Source */
+form[class^="webform-"] label, form[class^="webform-"] legend { font-size: 0.875rem; margin: 0; }
+
+form[class^="webform-"] .form-required:after { content: '*'; color: red; padding-right: 0.5rem; }
+
+form[class^="webform-"] .form-item, form[class^="webform-"] .webform-required { margin: 1rem 0; }
+
+form[class^="webform-"] .form-item.form-type-radio, form[class^="webform-"] .form-item.form-type-checkbox { margin: 0; }
+
+form[class^="webform-"] .form-item .container-inline { margin: 0; }
+
+form[class^="webform-"] .fieldset-wrapper > .form-item:last-of-type { margin-bottom: 0; }
+
+form[class^="webform-"] .form-type-radio:last-of-type { margin-bottom: 0; }
+
+form[class^="webform-"] .checkboxes--wrapper, form[class^="webform-"] .radios--wrapper, form[class^="webform-"] .webform-checkboxes-other--wrapper, form[class^="webform-"] .webform-radios-other--wrapper { margin: 1rem 0; }
+
+form[class^="webform-"] .option + .description, form[class^="webform-"] .form-checkboxes + .description, form[class^="webform-"] .form-radios + .description { margin-top: 0.125rem; font-size: 0.75rem; font-style: italic; }
+
+form[class^="webform-"] .form-composite.webform-fieldset--title-inline legend { margin: 0; float: none; }
+
+form[class^="webform-"] .webform-select-other--wrapper > legend + .fieldset-wrapper > .form-item { margin: 0; }
+
+form[class^="webform-"] .webform-select-other--wrapper > legend + .fieldset-wrapper > .form-item + .webform-select-other-input { margin: 0.5rem 0 0; }
+
+form[class^="webform-"] .webform-has-field-prefix, form[class^="webform-"] .webform-has-field-suffix { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 0 0.5rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+form[class^="webform-"] .webform-has-field-prefix > label, form[class^="webform-"] .webform-has-field-suffix > label { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
+
+form[class^="webform-"] .webform-has-field-prefix > input, form[class^="webform-"] .webform-has-field-suffix > input { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+form[class^="webform-"] .webform-has-field-prefix .field-prefix, form[class^="webform-"] .webform-has-field-prefix .field-suffix, form[class^="webform-"] .webform-has-field-suffix .field-prefix, form[class^="webform-"] .webform-has-field-suffix .field-suffix { -webkit-box-flex: 0; -ms-flex: 0; flex: 0; }
+
+/*# sourceMappingURL=../../../maps/webform/webform.elements.css.map */

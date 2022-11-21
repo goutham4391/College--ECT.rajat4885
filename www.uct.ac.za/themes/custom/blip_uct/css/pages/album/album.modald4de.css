@@ -1,0 +1,3 @@
+.node--type-album.node--view-mode-modal .slick-dots {
+  display: none !important; /* inline display block is more specific */
+}

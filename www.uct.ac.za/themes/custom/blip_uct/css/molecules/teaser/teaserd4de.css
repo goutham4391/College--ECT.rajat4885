@@ -1,0 +1,117 @@
+/*
+Teaser
+
+Default teaser component.<br>
+<pre>[THEME]/templates/content/node--teaser.twig</pre>
+
+Markup:
+  <article about="/awards/2020-10-12-social-responsiveness-award-nominations-are-open" class="node node--type-article node--view-mode-teaser teaser">
+    <div class="node__media">
+      <a href="#">
+        <div class="field field--name-field-image-ref field--type-entity-reference field--label-hidden field__item">
+          <article class="media media--type-image media--view-mode-square-small-1-1">
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+              <picture>
+                <img src="https://via.placeholder.com/100x100.png?text=100x100" width="100" height="100" class="image-style-standard-sml">
+              </picture>
+            </div>
+          </article>
+        </div>
+      </a>
+    </div>
+    <div property="articleBody" class="node__content">
+      <h3 class="node__title h6">
+        <a href="#" rel="bookmark">
+          <span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Social Responsiveness Award nominations are open</span>
+        </a>
+      </h3>
+      <div property="schema:text" class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Praesent egestas neque eu enim. Aenean vulputate eleifend tellus. Praesent nec nisl a purus blandit viverra. Etiam vitae tortor.</div>
+      <div class="node__links">
+        <ul class="links inline">
+          <li class="node-readmore">
+            <a href="/basic-page-z-list-no-display-option-not-grouped-no-tag-filters" rel="tag" hreflang="en">Read more</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+Styleguide Molecules.1
+*/
+.teaser, .teaser--summary { display: -webkit-box; display: -ms-flexbox; display: flex; background: var(--rw-background-color, #ffffff); overflow: hidden; }
+
+.teaser .node__media, .teaser--summary .node__media { margin-right: 1rem; max-width: 6.25rem; -webkit-box-flex: 0; -ms-flex: 0 0 6.25rem; flex: 0 0 6.25rem; }
+
+.teaser .node__title, .teaser--summary .node__title { font-size: 1rem; line-height: 1.25; margin-bottom: 0.5rem; }
+
+.teaser .node__title a, .teaser--summary .node__title a { color: #1e1e1e; color: var(--rw-text-color, #1e1e1e); }
+
+.teaser .node__content, .teaser--summary .node__content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; font-size: 0.875rem; line-height: 1.428571428571429; }
+
+.teaser .node__content .links.inline, .teaser--summary .node__content .links.inline { margin: 0; padding: 0; list-style: none; }
+
+.teaser .node__content .links.inline li:before, .teaser--summary .node__content .links.inline li:before { content: ""; }
+
+.teaser .node__links, .teaser--summary .node__links { margin-top: auto; }
+
+.teaser .node__links a, .teaser--summary .node__links a { display: block; margin-top: 0.5rem; }
+
+.teaser--contact, .teaser--summary--contact { background: #f7f8fb; padding: 0.5rem; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; border-bottom: 3px transparent solid; }
+
+.teaser--contact a, .teaser--summary--contact a { display: block; color: #1e1e1e; word-wrap: break-word; }
+
+.teaser--contact img, .teaser--summary--contact img { opacity: 1; -webkit-transition: all 0.2 ease-in-out; transition: all 0.2 ease-in-out; }
+
+.teaser--contact .node__media, .teaser--summary--contact .node__media { max-width: 5rem; margin-right: 0; }
+
+.teaser--contact .node__content, .teaser--summary--contact .node__content { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; font-size: 1rem; }
+
+.teaser--contact .card-section, .teaser--summary--contact .card-section { padding: 0 0 0 1rem; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.teaser--contact .contact--fullname, .teaser--summary--contact .contact--fullname { font-weight: bold; margin-top: auto; }
+
+.teaser--contact:hover, .teaser--summary--contact:hover { background: #e9ecfb; -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); cursor: pointer; border-bottom: 3px #0076d1 solid; }
+
+.teaser--contact:hover img, .teaser--summary--contact:hover img { opacity: 0.5; }
+
+.teaser.node--type-event, .teaser--summary.node--type-event { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-bottom: 1rem; }
+
+@media print, screen and (min-width: 40em) { .teaser.node--type-event, .teaser--summary.node--type-event { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; margin-bottom: 2rem; } }
+
+.teaser.node--type-event .preview-only, .teaser--summary.node--type-event .preview-only { display: none; }
+
+.teaser.node--type-event .node__media, .teaser--summary.node--type-event .node__media { max-width: none; -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; margin: 0 0 1rem; }
+
+.teaser.node--type-event .node__media img, .teaser--summary.node--type-event .node__media img { width: 100%; }
+
+@media print, screen and (min-width: 40em) { .teaser.node--type-event .node__media, .teaser--summary.node--type-event .node__media { margin: 0 1rem 0 0; max-width: 9.375rem; -webkit-box-flex: 0; -ms-flex: 0 0 9.375rem; flex: 0 0 9.375rem; } }
+
+@media print, screen and (min-width: 64em) { .teaser.node--type-event .node__media, .teaser--summary.node--type-event .node__media { max-width: 12.5rem; -webkit-box-flex: 0; -ms-flex: 0 0 12.5rem; flex: 0 0 12.5rem; } }
+
+.teaser.node--type-event .node__title, .teaser--summary.node--type-event .node__title { font-size: 1.25rem; }
+
+@media print, screen and (min-width: 64em) { .teaser.node--type-event .node__title, .teaser--summary.node--type-event .node__title { font-size: 1.5rem; } }
+
+.teaser.node--type-event .node__content, .teaser--summary.node--type-event .node__content { font-size: 1rem; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
+
+.teaser.node--type-event .node__content .text-formatted, .teaser--summary.node--type-event .node__content .text-formatted { margin-bottom: 1rem; }
+
+.teaser.node--type-event .node__content .text-formatted > p:last-child, .teaser--summary.node--type-event .node__content .text-formatted > p:last-child { margin-bottom: 0; }
+
+.teaser.node--type-event .node__meta, .teaser--summary.node--type-event .node__meta { position: relative; margin: 0 0 1rem; padding: 1rem 0 0; border-top: #0098db 2px solid; }
+
+@media print, screen and (min-width: 40em) { .teaser.node--type-event .node__meta, .teaser--summary.node--type-event .node__meta { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; border-top: none; border-left: #0098db 2px solid; margin: 1rem 1rem 1rem 1rem; padding: 0 0 0 1rem; -webkit-box-flex: 0; -ms-flex: 0 0 12.5rem; flex: 0 0 12.5rem; } }
+
+@media print, screen and (min-width: 64em) { .teaser.node--type-event .node__meta, .teaser--summary.node--type-event .node__meta { margin: 2rem 2rem 2rem 1rem; } }
+
+.teaser.node--type-event .node__meta > .date--start, .teaser.node--type-event .node__meta > .date--end, .teaser--summary.node--type-event .node__meta > .date--start, .teaser--summary.node--type-event .node__meta > .date--end { font-size: 1rem; line-height: 1; margin-bottom: 0.5rem; width: 50%; color: #72808a; }
+
+@media print, screen and (min-width: 40em) { .teaser.node--type-event .node__meta > .date--start, .teaser.node--type-event .node__meta > .date--end, .teaser--summary.node--type-event .node__meta > .date--start, .teaser--summary.node--type-event .node__meta > .date--end { width: auto; } }
+
+.teaser.node--type-event .node__meta > .date--end, .teaser--summary.node--type-event .node__meta > .date--end { font-style: italic; }
+
+.teaser.node--type-event .node__meta > .button, .teaser--summary.node--type-event .node__meta > .button { position: absolute; top: 1rem; right: 0; margin: 0; color: #ffffff; max-width: 8.125rem; }
+
+@media print, screen and (min-width: 40em) { .teaser.node--type-event .node__meta > .button, .teaser--summary.node--type-event .node__meta > .button { margin-top: auto; position: static; top: auto; right: auto; } }
+
+/*# sourceMappingURL=../../../maps/teaser/teaser.css.map */

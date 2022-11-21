@@ -1,0 +1,18 @@
+/* icons for custom items */
+
+
+/* Dashboard icon */
+.toolbar .toolbar-bar .toolbar-icon-uct-ui-dashboard-adminmenu::before {
+  -webkit-mask-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='8' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='8' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='8' y1='18' x2='21' y2='18'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='3' y1='6' x2='3.01' y2='6'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='3' y1='12' x2='3.01' y2='12'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='3' y1='18' x2='3.01' y2='18'%3E%3C/line%3E%3C/svg%3E%0A") !important;
+  mask-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='8' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='8' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='8' y1='18' x2='21' y2='18'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='3' y1='6' x2='3.01' y2='6'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='3' y1='12' x2='3.01' y2='12'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='3' y1='18' x2='3.01' y2='18'%3E%3C/line%3E%3C/svg%3E%0A") !important;
+}
+
+/* Messages icon */
+.toolbar .toolbar-bar .toolbar-icon-views-viewviews-uct-messages-pg-messages-overview::before {
+  -webkit-mask-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' points='7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2'%3E%3C/polygon%3E%3Cline fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E%0A") !important;
+  mask-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' points='7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2'%3E%3C/polygon%3E%3Cline fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E%0A") !important;
+}
